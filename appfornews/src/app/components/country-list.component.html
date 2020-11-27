@@ -1,0 +1,17 @@
+<div class="row mt-3 mb-3">
+    <div class="col d-flex justify-content-between align-items-center">
+        <h5>Countries</h5>
+        <button type="button" class="btn btn-warning" [routerLink]="['/setting']">Setting</button>        
+    </div>
+</div>
+
+<form action="">
+
+
+</form>
+<div class="list-group mt-5">
+    <a *ngFor="let c of countries" class="list-group-item list-group-item-action" [routerLink]="['/country-list',c.alpha2Code]">
+        {{c.name}} <img src="{{c.flag}}" alt="" width="30"> 
+    </a>
+</div>
+

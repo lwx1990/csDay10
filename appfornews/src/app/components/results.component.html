@@ -1,0 +1,26 @@
+<div class="row mt-3 mb-3">
+    <div class="col d-flex justify-content-between align-items-center">
+        <h5>News from {{acode}}</h5>
+        <button type="button" class="btn btn-warning" [routerLink]="['/country-list']">Back</button>        
+    </div>
+</div>
+
+
+
+
+<div class="row row-cols-1 row-cols-md-3">
+    <div class="col mb-4" *ngFor="let c of newsArray; let i = index">
+        <div class="card">
+            <img src={{c.urlToImage}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{c.title}}</h5>
+                <p class="card-text">Author: {{c.author}}</p>
+                <p class="card-text">Description: {{c.description}}</p>
+                <p class="card-text">Content: {{c.content}}</p>
+                <p class="card-text">{{c.publishedAt | date}}</p>
+            </div>
+          
+            
+        </div>
+    </div>
+</div>
