@@ -8,5 +8,5 @@ export interface News {
 
 export interface Countries{
     alpha2code: string;
-    // country: any[];
+    
 }

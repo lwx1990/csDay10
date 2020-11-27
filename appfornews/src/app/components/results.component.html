@@ -1,11 +1,9 @@
 <div class="row mt-3 mb-3">
     <div class="col d-flex justify-content-between align-items-center">
-        <h5>News from {{acode}}</h5>
+        <h5>News from {{acode}} </h5>
         <button type="button" class="btn btn-warning" [routerLink]="['/country-list']">Back</button>        
     </div>
 </div>
-
-
 
 
 <div class="row row-cols-1 row-cols-md-3">
@@ -17,10 +15,12 @@
                 <p class="card-text">Author: {{c.author}}</p>
                 <p class="card-text">Description: {{c.description}}</p>
                 <p class="card-text">Content: {{c.content}}</p>
+                <p class="card-text">Source: {{c.source.name}}</p>
                 <p class="card-text">{{c.publishedAt | date}}</p>
             </div>
-          
-            
+            <div class="card-footer d-flex justify-content-between">
+                <a href={{c.url}} target="_blank" class="btn btn-primary">Link </a>
+            </div>            
         </div>
     </div>
 </div>

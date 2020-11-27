@@ -17,6 +17,8 @@ export class ResultsComponent implements OnInit {
   acode: string;
   newsArray = [];
 
+  ctname: string
+
 
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private resultSvc: NewService, 
     private coutrydb: CountryDatabase, private newdb: NewsDatabase, private articledb: articleDatabase) { }

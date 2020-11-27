@@ -27,8 +27,8 @@ export class CountryListComponent implements OnInit {
     for (const o of this.countries) {
       await this.countrydb.saveCountry(o);
    }
-    
-             
+
+     
     
   }
 

@@ -21,14 +21,11 @@ export class CountryDatabase extends Dexie {
 
     }
 
-
     async saveCountry(c: Countries): Promise<any>{
         return await this.countrieslist.put(c);
     }
 
 
-    // async getAlpha(): Promise<Countries>{
-
-    // }
+   
 
 }
