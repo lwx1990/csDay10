@@ -5,16 +5,13 @@
     </div>
 </div>
 
-<form action="">
 
-
-</form>
 <div class="list-group mt-5">
     <a *ngFor="let c of countries" class="list-group-item list-group-item-action" [routerLink]="['/country-list',c.alpha2Code]">
         
         <div class="d-flex justify-content-between ">
             {{c.name}}
-            <img src="{{c.flag}}" alt="" width="50"> 
+            <img src="{{c.flag}}" alt="" width="30"> 
         </div> 
     </a>
 </div>
