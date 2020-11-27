@@ -14,18 +14,12 @@
             <div class="row mt-2">
                 <div class="col d-flex justify-content-end align-items-center">
                     <button type="button" class="btn btn-success" [disabled]="form.invalid" (click)="addAPI()">Save</button>
-                    <button type="button" class="btn btn-dark ml-1" [disabled]="form.invalid" (click)="deleteAPI()">Delete</button>
+                    <button type="button" class="btn btn-dark ml-1" [disabled]="!apikey" (click)="deleteAPI()">Delete</button>
+                    <button type="button" class="btn btn-warning ml-1" (click)="goBacktoCountry()">Back</button>
                 </div>
             </div>
         </form>
-
-        
+       
     </div>
 </div>
 
-
-<div class="row">
-    <div class="col d-flex justify-content-start align-items-center">
-        <button type="button" class="btn btn-warning" (click)="goBacktoCountry()">Back</button>        
-    </div>
-</div>

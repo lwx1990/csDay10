@@ -11,6 +11,7 @@ import { NewsDatabase } from '../news.database';
 })
 export class SettingComponent implements OnInit {
   form: FormGroup
+  apikey: string
 
   constructor(private router: Router, private fb: FormBuilder, private newsdb: NewsDatabase) { }
 
@@ -19,6 +20,8 @@ export class SettingComponent implements OnInit {
       api: this.fb.control('',[Validators.required]),
 
     })
+   
+    this.getkeyapi()
   }
 
   async addAPI(){
@@ -26,12 +29,21 @@ export class SettingComponent implements OnInit {
       api: this.form.get('api').value,
     }
     await this.newsdb.saveAPI(set);
-    
+    this.apikey = this.form.get('api').value
+
+    this.router.navigate(['/country-list'])
   }
 
   async deleteAPI(){
     
     await this.newsdb.deleteAPI()
+    this.apikey = ""
+    this.form.reset()
+  }
+
+  async getkeyapi(){
+     this.apikey = await this.newsdb.getAPI()
+     this.form.get('api').setValue(this.apikey)
   }
 
   goBacktoCountry(){

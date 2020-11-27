@@ -13,6 +13,7 @@ import { CountryListComponent } from './components/country-list.component';
 import { ResultsComponent } from './components/results.component';
 import { NewService } from './news.service';
 import { CountryDatabase } from './countries.database';
+import { articleDatabase } from './article.database';
 
 const ROUTES: Routes = [
   {path: '', component: MainComponent},
@@ -38,7 +39,7 @@ const ROUTES: Routes = [
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [NewsDatabase,NewService,CountryDatabase],
+  providers: [NewsDatabase,NewService,CountryDatabase,articleDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
